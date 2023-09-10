@@ -19,7 +19,7 @@ $ yay -Sy vscodium-bin
     `$ git clone ~/dotfiles https://github.com/azm6/dotfiles-arch.git`
     Remove files that might already exsist
     `$ rm ~/.xinitrc ~/.Xresources`
-    `$ rm README.md`
+    `$ rm README.md LICENSE`
     `$ stow *`
     If stow fails overriding files that already exist try running it with the `-f` flag.
-    `$ git restore README.md`
+    `$ git restore README.md LICENSE`
