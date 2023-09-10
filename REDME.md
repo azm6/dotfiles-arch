@@ -1,5 +1,5 @@
 # Config files for arch-based distro
-- Updating the system
+## Updating the system
 ```bash
 $ sudo pacman -Syu
 ```
@@ -17,8 +17,9 @@ $ yay -Sy vscodium-bin
 
 ## Using gnu stow for quick setup
     `$ git clone ~/dotfiles https://github.com/azm6/dotfiles-arch.git`
-    `$ rm README.md`
     Remove files that might already exsist
     `$ rm ~/.xinitrc ~/.Xresources`
+    `$ rm README.md`
     `$ stow *`
     If stow fails overriding files that already exist try running it with the `-f` flag.
+    `$ git restore README.md`
