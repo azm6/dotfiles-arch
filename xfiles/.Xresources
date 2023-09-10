@@ -1,0 +1,43 @@
+#include ".xfiles/onedark"
+! urxvt https://github.com/majutsushi/urxvt-font-sizea
+URxvt*buffered: true
+URxvt*font: xft:Hack:style=Regular:size=13:antialias=true,
+URxvt*depth: 32
+URxvt*borderless: 1
+URxvt*scrollBar:false 
+URxvt*loginShell: true
+Urxvt*secondaryScroll: true     # Enable Shift-PageUp/Down in screen
+URxvt*saveLines: 5000
+URxvt*termName: rxvt-unicode
+URxvt*url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt*cursorBlink:false 
+Urxvt*transparent: false 
+!URxvt*blurRadius: 15
+!urxvt*shading: 15
+URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
+URxvt*scrollstyle:rxvt
+
+!Font Resize
+URxvt.keysym.C-plus:     font-size:increase
+URxvt.keysym.C-minus:   font-size:decrease
+URxvt.keysym.C-equal:  font-size:reset
+
+!XTERM
+XTerm.vt100.faceName: Noto Sans Mono:style=Regular:antialias=true
+XTerm*faceSize: 13
+XTerm*saveLines: 16384
+XTerm*loginShell: true
+XTerm*background: #000000
+XTerm*foreground: #ffffff
+
+! Xorg Scalling 
+Xft.dpi: 144
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
