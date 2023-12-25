@@ -40,4 +40,4 @@ Xft.rgba: rgb
 Xft.autohint: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-
+Xcursor.theme: Catppuccin-Mocha-Light-Cursors

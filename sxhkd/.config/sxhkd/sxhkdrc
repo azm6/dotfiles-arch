@@ -1,0 +1,128 @@
+#!/usr/bin/env sh
+
+#------------COSTUM BINDINGS------------
+#calc
+super + shift + c
+    gnome-calculator
+
+#Locker
+super + shift + x
+    slock
+
+#book List 
+super + alt + b
+    bash $HOME/Scripts/books-search.sh
+#audiobook List
+super + alt + o
+    bash $HOME/Scripts/audiobooks-search.sh
+
+#Wallpaper changer 
+super + shift + o
+    nitrogen --set-zoom-fill `find ~/Pictures/wp -type f | shuf | head -1`
+
+#Screenshots
+Print 
+    scrot -q 100 $HOME/Pictures/screenshots/'%Y-%m-%d-%s_screenshot.png' 
+
+#Browser
+super + b 
+    firefox
+
+#File managers
+super + z
+    alacritty -t joshuto -e joshuto
+
+super + shift + z
+	pcmanfm
+
+#Music Player
+super + shift + m
+    alacritty --class ncmpcpp -e ncmpcpp
+	#urxvtc  -name ncmpcpp -e ncmpcpp
+super + alt + 9
+	mpc --host=127.0.0.1 --port=6601 toggle
+super + alt + 0
+	mpc --host=127.0.0.1 --port=6601 next
+super + alt + 8
+	mpc --host=127.0.0.1 --port=6601 prev
+
+# alsa controls
+super + v
+  amixer set Master 5%-
+super + shift + v
+  amixer set Master 5%+
+XF86AudioMute 
+  amixer set Master toggle
+
+
+# Touchpad controls
+XF86TouchpadToggle  
+	$HOME/scripts/toggletouchpad.sh
+
+# Sreen brightness controls
+XF86MonBrightnessUp  
+	xbacklight -inc 5 # increase screen brightness
+XF86MonBrightnessDown  
+	xbacklight -dec 5 # decrease screen brightness
+super + alt + 2  
+	xbacklight -inc 5 # increase screen brightness
+super + alt + 1
+	xbacklight -dec 5 # decrease screen brightness
+
+# terminal emulator
+super + t
+    alacritty
+
+# rofi
+super +  d
+    rofi -show drun -theme minimal
+
+super +  shift + e
+    rofi -modi emoji -show emoji -theme minimal
+
+# Restart bspwm
+super + shift + r
+	bspc wm -r
+
+# make sxhkd reload its configuration files:
+super + r
+	pkill -USR1 -x sxhkd
+
+# bspwm hotkeys----------------------------
+
+# quit bspwm normally
+super + shift + Escape
+	bspc quit
+
+# close and kill
+super + q
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# state----------------------------
+# set the window state
+super + shift + f
+	bspc node -t {fullscreen, tiled}
+super + shift + t
+    bspc node -t {floating,tiled}
+
+# focus/swap----------------------------
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous node in the current desktop
+super + c
+	bspc node -f next.local.window
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'

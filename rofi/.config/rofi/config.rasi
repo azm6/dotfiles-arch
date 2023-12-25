@@ -13,4 +13,5 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "catppuccin-frappe"
+//@theme "catppuccin-frappe"
+@theme "/home/azme/.config/rofi/themes/catppuccin-frappe.rasi"
