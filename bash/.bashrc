@@ -1,5 +1,6 @@
 # .bashrc
 
+export EDITOR=nvim
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
