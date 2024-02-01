@@ -1,0 +1,57 @@
+[colors.primary]
+background = "#1e2127"
+foreground = "#abb2bf"
+
+[colors.normal]
+black = "#5c6370"
+red = "#e06c75"
+green = "#98c379"
+yellow = "#e5c07b"
+blue = "#61afef"
+magenta = "#c678dd"
+cyan = "#56b6c2"
+white = "#abb2bf"
+
+[colors.bright]
+black = "#5c6370"
+red = "#e06c75"
+green = "#98c379"
+yellow = "#e5c07b"
+blue = "#61afef"
+magenta = "#c678dd"
+cyan = "#56b6c2"
+white = "#ffffff"
+
+
+[cursor]
+style = "Underline"
+unfocused_hollow = true
+vi_mode_style = "Block"
+
+[font]
+size = 18
+
+[font.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "FiraCode Nerd Font Mono"
+style = "Light"
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Regular"
+
+[font.offset]
+x = -1
+y = -1
+
+[bell]
+animation = "EaseOutExpo"
+color = "#ffffff"
+duration = 0
