@@ -3,16 +3,25 @@
     "position": "top",
 
     "spacing": 3,
-    "height": 32,
+    "height": "28",
+    "reload_style_on_change": 1,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [], 
-    "modules-right": [ "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": [ 
+        "pulseaudio", 
+        "backlight", 
+        "battery", 
+        "network", 
+        "cpu", 
+        "clock", 
+        "tray"
+    ],
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{icon}",
     },
-    
+
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -22,11 +31,12 @@
     },
 
     "tray": {
-        "icon-size": 21,
+        "icon-size": 18,
         "spacing": 10
     },
 
     "clock": {
+        "format": "{:%a, %d %b. %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d %m %Y}"
     },
@@ -57,12 +67,12 @@
 
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}%",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -72,32 +82,29 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "  {bandwidthDownBytes}",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "connect to {essid} ({signalStrength}%) {ifname} via {gwaddr} / {ifname}: {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "offline",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
+        "tooltip-format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source": "{volume}%  ",
+        "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": " ",
+            "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol"
     },
+
 }
 
