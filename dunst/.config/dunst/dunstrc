@@ -1,0 +1,56 @@
+[global]
+    follow = mouse
+    indicate_hidden = yes
+    offset = 20x20
+    notification_height = 12
+
+    separator_height = 2
+
+    padding = 24
+    horizontal_padding = 24
+    text_icon_padding = 0
+    frame_width = 2
+
+    min_icon_size = 64
+    max_icon_size = 64
+
+    frame_color = "#D3D7CFee"
+    separator_color = frame
+
+    sort = yes
+    idle_threshold = 120
+    font = monospace 12
+    line_height = 0
+    markup = full
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    stack_duplicates = true
+    hide_duplicate_count = false
+
+    show_indicators = yes
+
+    title = Dunst
+    class = Dunst
+
+    corner_radius = 20
+    timeout = 5
+
+[urgency_low]
+    background = "#282c34"
+    forground = "#ABB2BF"
+    frame_color = "#ABB2BF"
+    timeout = 5
+
+[urgency_normal]
+    background = "#282c34"
+    forground = "#ABB2BF"
+    frame_color = "#ABB2BF"
+    timeout = 10
+
+[urgency_critical]
+    background = "#282c34"
+    frame_color = "#E06C75"
+    foreground = "#E06C75"
+    timeout = 15
