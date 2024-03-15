@@ -81,7 +81,7 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {bandwidthDownBytes}",
+        "format-wifi": "{bandwidthDownBytes}  ",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "connect to {essid} ({signalStrength}%) {ifname} via {gwaddr} / {ifname}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
