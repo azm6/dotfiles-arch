@@ -39,18 +39,18 @@
 
 [urgency_low]
     background = "#282c34"
-    forground = "#ABB2BF"
+    foreground = "#ABB2BF"
     frame_color = "#ABB2BF"
     timeout = 5
 
 [urgency_normal]
-    background = "#282c34"
-    forground = "#ABB2BF"
-    frame_color = "#ABB2BF"
+    background = "#eff1f5"
+    foreground = "#4c4f69"
+    frame_color = "#4c4f69"
     timeout = 10
 
 [urgency_critical]
-    background = "#282c34"
-    frame_color = "#E06C75"
-    foreground = "#E06C75"
+    background = "#eff1f5"
+    foreground = "#d20f39"
+    frame_color = "#d20f39"
     timeout = 15

@@ -1,53 +1,113 @@
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
+
 * {
     border: none;
     border-radius: 0;
-    font-family: "FiraCode Nerd Font",Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-family: "FiraCode Nerd Font";
+    font-weight: 500;
+    font-size: 16px;
     min-height: 0;
     padding: 2px ;
 }
 
 window#waybar {
-    background: rgba(44, 47, 55, 0.7);
-    color: white;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 tooltip {
-    background: rgba(44, 47, 55, 0.8);
-    border: 1px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-  color: white;
-  background: rgba(43, 48, 59, 1);
+    background: @base;
+    border: 1px solid @lavender;
 }
 
-#workspaces {
-    background: rgba(43, 48, 59, 1);
+tooltip label {
+    color: @lavender;
+    background: @base;
 }
 
 #workspaces button {
     padding: 0 0.5rem;
-    color: rgba(141, 141, 154, 1);
-    background: transparent;
+    color: @surface2;
 }
 
 #workspaces button.active {
-  color: #e5c07b;
-  font-weight: bolder;
+  color: @pink;
+  font-weight: 900;
 }
 
 #clock, #battery, #cpu, #network, #backlight, #pulseaudio #tray #workspaces {
     padding: 0 16px;
 }
+#clock {
+    color: @flamingo;
+}
+
+#cpu {
+    color: @mauve;
+}
+
+#network {
+    color: @maroon;
+}
+
+#battery {
+    color: @peach;
+}
+
+#backlight{
+    color: @green;
+}
+
+#pulseaudio {
+    color: @sapphire;
+}
+
+.modules-left{
+    background-color: @base;
+}
+
+.modules-right{
+    background-color: @base;
+    padding: 0 16px;
+}
 
 
 #battery.charging {
-    color: white;
-    background-color: #26A65B;
+    color: @crust;
+    background-color: @green;
 }
 
+
 #battery.warning:not(.charging) {
-    background: #f53c3c;
+    background: @red;
     color: white;
     animation-name: blink;
     animation-duration: 0.5s;

@@ -12,7 +12,8 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 
 	})
-	use ('navarasu/onedark.nvim')
+	-- use ('navarasu/onedark.nvim')
+    use { "catppuccin/nvim", as = "catppuccin" }
 	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}
 	)
 	use ('theprimeagen/harpoon')
