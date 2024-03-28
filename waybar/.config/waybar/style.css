@@ -33,7 +33,6 @@
     border: none;
     border-radius: 0;
     font-family: "FiraCode Nerd Font";
-    font-weight: 500;
     font-size: 16px;
     min-height: 0;
     padding: 2px ;
@@ -59,8 +58,8 @@ tooltip label {
 }
 
 #workspaces button.active {
-  color: @pink;
-  font-weight: 900;
+    font-weight: bolder;
+    background-color: @pink;
 }
 
 #clock, #battery, #cpu, #network, #backlight, #pulseaudio #tray #workspaces {
@@ -100,15 +99,10 @@ tooltip label {
 }
 
 
-#battery.charging {
+#battery.critical:not(.charging) {
     color: @crust;
-    background-color: @green;
-}
+    background-color: @red;
 
-
-#battery.warning:not(.charging) {
-    background: @red;
-    color: white;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -118,6 +112,6 @@ tooltip label {
 
 @keyframes blink {
     to {
-        background-color: transparent;
+        background-color: @yellow;
     }
 }
