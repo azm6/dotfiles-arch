@@ -5,6 +5,8 @@ export PATH="$HOME/Software/Discord:$PATH"
 export PATH="$HOME/Software/android-studio/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 export EDITOR='nvim'
 export MPD_HOST=127.0.0.1
@@ -34,3 +36,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# bun completions
+[ -s "/home/azme/.bun/_bun" ] && source "/home/azme/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
