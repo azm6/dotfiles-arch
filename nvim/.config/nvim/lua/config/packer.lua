@@ -7,18 +7,13 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use ('wbthomason/packer.nvim')
 	use ({
-		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim', tag = '0.1.5', -- or , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
-
 	})
-	-- use ('navarasu/onedark.nvim')
-    use { "catppuccin/nvim", as = "catppuccin" }
-	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}
-	)
+  use { "catppuccin/nvim", as = "catppuccin" }
+	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('theprimeagen/harpoon')
 	use ('mbbill/undotree')
-
 	use("tpope/vim-fugitive")
 	use("nvim-treesitter/nvim-treesitter-context");
 
@@ -48,8 +43,8 @@ return require('packer').startup(function(use)
 	use("folke/zen-mode.nvim")
 	use("eandrju/cellular-automaton.nvim")
 	use("laytan/cloak.nvim")
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 end)

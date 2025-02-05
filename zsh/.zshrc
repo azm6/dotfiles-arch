@@ -7,6 +7,8 @@ export PATH="$HOME/.deno/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
+export PATH="$HOME/.pub-cache/bin:$PATH"
+
 
 export EDITOR='nvim'
 export MPD_HOST=127.0.0.1
@@ -15,6 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="theunraveler"
 
 alias c="codium"
+alias z="zed"
 
 plugins=(git vi-mode zsh-interactive-cd aliases zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -43,3 +46,4 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+. "/home/azme/.deno/env"
